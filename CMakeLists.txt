@@ -44,14 +44,14 @@ if(COPY_BUILD_TO_PARENT AND COPY_BUILD_TO_F4SE)
 endif()
 
 if (COPY_BUILD_TO_PARENT)
-	set(OUTPUT_PATH "${CMAKE_CURRENT_SOURCE_DIR}/.." CACHE STRING "")
+	set(OUTPUT_PATH "${CMAKE_CURRENT_SOURCE_DIR}/..")
 elseif(COPY_BUILD_TO_F4SE)
 	if (NOT DEFINED FO4_ROOT AND NOT DEFINED ENV{FO4_ROOT})
 		message(FATAL_ERROR "The environment variable FO4_ROOT is not set.")
 	endif()
 
 	set(FO4_ROOT "$ENV{FO4_ROOT}" CACHE STRING "")
-	set(OUTPUT_PATH "${FO4_ROOT}/Data/F4SE/Plugins" CACHE STRING "")
+	set(OUTPUT_PATH "${FO4_ROOT}/Data/F4SE/Plugins")
 endif()
 
 # --- Add Sources ---
