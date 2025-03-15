@@ -2,9 +2,9 @@
 
 cmake_minimum_required(VERSION 3.30)
 
-set(PROJECT_NAME "CommonLibF4_Template")
-set(PROJECT_AUTHOR "Author")
-set(PROJECT_VERSION 1.0.0.0)
+set(PROJECT_NAME "f4ee-detours")
+set(PROJECT_AUTHOR "nopse0")
+set(PROJECT_VERSION 0.0.1.0)
 set(PROJECT_LICENSE "MIT License")
 set(PROJECT_DESCRIPTION "${PROJECT_NAME}")
 
@@ -62,6 +62,8 @@ file(
 	CONFIGURE_DEPENDS
 		"${CMAKE_CURRENT_SOURCE_DIR}/include/*"
 		"${CMAKE_CURRENT_SOURCE_DIR}/src/*"
+		"${CMAKE_CURRENT_SOURCE_DIR}/extern/detourxs/*.h"
+		"${CMAKE_CURRENT_SOURCE_DIR}/extern/detourxs/*.cpp"
 )
 
 list(

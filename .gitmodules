@@ -1,3 +1,6 @@
 [submodule "extern/CommonLibF4"]
 	path = extern/CommonLibF4
 	url = https://github.com/LucaDotGit/CommonLibF4
+[submodule "extern/detourxs"]
+	path = extern/detourxs
+	url = https://github.com/nopse0/detourxs.git
