@@ -29,9 +29,6 @@ namespace
 
 	void install_hook()
 	{
-
-		typedef bool (*RemoveOverlay_t)(OverlayInterface*, bool, UniqueID);
-
 		auto sum = checksum("Data/F4SE/Plugins/f4ee.dll");
 		// logger::info("f4ee.dll checksum = {}", sum);
 		// f4ee.dll v1.6.20 checksum is: 94335105
