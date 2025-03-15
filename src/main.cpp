@@ -39,7 +39,7 @@ namespace
 			// We don't need the detour later on, but the destructor mustn't be called
 			uintptr_t baseAddr = reinterpret_cast<uintptr_t>(GetModuleHandleA("f4ee.dll"));
 			// Thanks to Evi1Panda for finding out the offset of the RemoveOverlay function
-			if (baseAddr && !removeOverlayDetour.Create(reinterpret_cast<LPVOID>(baseAddr + 0x420D0), &HookedRemoveOverlay)) {
+			if (!baseAddr || !removeOverlayDetour.Create(reinterpret_cast<LPVOID>(baseAddr + 0x420D0), &HookedRemoveOverlay)) {
 				logger::info("Failed to create OverlayInterface::RemoveOverlay detour!");
 			}
 			else {
